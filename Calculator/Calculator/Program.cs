@@ -14,7 +14,7 @@ class Program
 			Console.WriteLine("Введите второе число:");
 			double num2 = Convert.ToDouble(Console.ReadLine());
 
-			Console.WriteLine("Введите операцию (+, -, *, /):");
+			Console.WriteLine("Введите операцию (+, -, *, /, ^):");
 			string op = Console.ReadLine();
 
 			double result = 0;
@@ -40,6 +40,9 @@ class Program
 						Console.WriteLine("Ошибка деления на ноль.");
 					}
 					break;
+				case "^":
+                    result = Math.Pow(num1, num2);
+                    break;
 				default:
 					Console.WriteLine("Неправильная операция.");
 					break;
